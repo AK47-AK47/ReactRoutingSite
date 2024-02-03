@@ -1,14 +1,45 @@
-import Header from './components/Header.jsx';
+import React from 'react';
+import './App.css';
+/*
+import Header from './components/Header';
 import Footer from './components/Footer.jsx';
 import MainBody from './components/MainBody.jsx';
-import './App.css';
+*/
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from 'react-router-dom';
+import Home from './pages-views/Home.jsx';
+import AboutUs from './pages-views/AboutUs.jsx';
+import Products from './pages-views/Products.jsx';
+import Product from './pages-views/Product.jsx';
+import ContactUs from './pages-views/ContactUs.jsx';
+
+import RootLayout from './components/RootLayout.jsx';
+
+const myRouter = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/product/:id" element={<Product />} />
+      <Route path="/contact-us" element={<ContactUs />} />
+    </Route>
+  )
+);
 
 export default function App() {
   return (
-    <div>
-      <Header title={"React Routing Demo Site"} />
+    <>
+      {/*
+      <Header title={name} />
       <MainBody />
       <Footer />
-    </div>
+      */}
+      <RouterProvider router={myRouter} />
+    </>
   );
 }
