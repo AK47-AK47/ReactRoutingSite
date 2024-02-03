@@ -1,5 +1,5 @@
 import { Link, useLoaderData, useNavigation } from 'react-router-dom';
-import UserCard from './UserCard.jsx';
+import UserCard from '../components/UserCard.jsx';
 
 export default function Users() {
   /**
