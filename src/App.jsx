@@ -8,8 +8,8 @@ import MainBody from './components/MainBody.jsx';
 import {
   RouterProvider,
   createBrowserRouter,
-  createRoutesFromElements,
-  Route,
+  //createRoutesFromElements,
+  //Route,
 } from 'react-router-dom';
 //components
 import Home from './pages-views/Home.jsx';
@@ -17,6 +17,7 @@ import AboutUs from './pages-views/AboutUs.jsx';
 import Products from './pages-views/Products.jsx';
 import Product from './pages-views/Product.jsx';
 import Users from './pages-views/Users.jsx';
+import User from './pages-views/User.jsx';
 import ContactUs from './pages-views/ContactUs.jsx';
 
 import RootLayout from './components/RootLayout.jsx';
@@ -62,6 +63,10 @@ const myRouter = createBrowserRouter([
         path: 'users',
         element: <Users />,
         loader: loadUsers,
+      },
+      {
+        path: '/user/:id',
+        element: <User />,
       },
       {
         path: 'contact-us',
