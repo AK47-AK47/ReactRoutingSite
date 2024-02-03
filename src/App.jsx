@@ -19,6 +19,7 @@ import ContactUs from './pages-views/ContactUs.jsx';
 
 import RootLayout from './components/RootLayout.jsx';
 
+/*
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
@@ -30,6 +31,36 @@ const myRouter = createBrowserRouter(
     </Route>
   )
 );
+*/
+
+const myRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/about-us',
+        element: <AboutUs />,
+      },
+      {
+        path: '/products',
+        element: <Products />,
+      },
+      {
+        path: '/product/:id',
+        element: <Product />,
+      },
+      {
+        path: 'contact-us',
+        element: <ContactUs />,
+      },
+    ],
+  },
+]);
 
 export default function App() {
   return (
