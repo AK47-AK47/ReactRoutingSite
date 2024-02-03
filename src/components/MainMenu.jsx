@@ -20,6 +20,11 @@ export default function MainMenu() {
           </Link>
         </li>
         <li>
+          <Link className={styles.link} to="/users">
+            Users
+          </Link>
+        </li>
+        <li>
           <Link className={styles.link} to="/contact-us">
             Contact Us
           </Link>
