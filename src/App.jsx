@@ -17,7 +17,9 @@ import AboutUs from './pages-views/AboutUs.jsx';
 import Products from './pages-views/Products.jsx';
 import Product from './pages-views/Product.jsx';
 import Users from './pages-views/Users.jsx';
+import UsersError from './pages-views/UsersError.jsx';
 import User from './pages-views/User.jsx';
+import UserError from './pages-views/UserError.jsx';
 import ContactUs from './pages-views/ContactUs.jsx';
 
 import RootLayout from './components/RootLayout.jsx';
@@ -63,11 +65,13 @@ const myRouter = createBrowserRouter([
         path: 'users',
         element: <Users />,
         loader: loadUsers,
+        errorElement: <UsersError />,
       },
       {
         path: '/user/:id',
         element: <User />,
         loader: loadUser,
+        errorElement: <UserError />,
       },
       {
         path: 'contact-us',
