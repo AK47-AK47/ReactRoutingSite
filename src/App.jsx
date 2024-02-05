@@ -22,7 +22,7 @@ import ContactUs from './pages-views/ContactUs.jsx';
 
 import RootLayout from './components/RootLayout.jsx';
 //loaders
-import { loadUsers } from './loaders/loaders.jsx';
+import { loadUsers, loadUser } from './loaders/loaders.jsx';
 
 /*
 const myRouter = createBrowserRouter(
@@ -67,6 +67,7 @@ const myRouter = createBrowserRouter([
       {
         path: '/user/:id',
         element: <User />,
+        loader: loadUser,
       },
       {
         path: 'contact-us',
