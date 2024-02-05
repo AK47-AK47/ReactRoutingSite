@@ -21,8 +21,9 @@ import UsersError from './pages-views/UsersError.jsx';
 import User from './pages-views/User.jsx';
 import UserError from './pages-views/UserError.jsx';
 import ContactUs from './pages-views/ContactUs.jsx';
-
+//layouts
 import RootLayout from './components/RootLayout.jsx';
+import ErrorLayout from './components/ErrorLayout.jsx';
 //loaders
 import { loadUsers, loadUser } from './loaders/loaders.jsx';
 
@@ -44,6 +45,8 @@ const myRouter = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
+    //catches every error on every child Route that NOT HAVE a errorElement property
+    errorElement: <ErrorLayout />,
     children: [
       {
         path: '/',
@@ -71,7 +74,7 @@ const myRouter = createBrowserRouter([
         path: '/user/:id',
         element: <User />,
         loader: loadUser,
-        errorElement: <UserError />,
+        //errorElement: <UserError />,
       },
       {
         path: 'contact-us',
