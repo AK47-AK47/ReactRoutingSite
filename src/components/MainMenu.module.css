@@ -1,13 +1,27 @@
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    list-style: none;
-  }
-  
-  .link {
-    border: 2px solid red;
-    text-decoration: none;
-    padding: 8px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+}
+
+.link {
+  border: 2px solid purple;
+  text-decoration: none;
+  padding: 8px;
+  color: purple;
+}
+
+.link:hover {
+  background-color: purple;
+  color: white;
+}
+
+.active {
+  background-color: purple;
+  color: white;
+}
+
+.active:hover {
+  background-color: rgb(151, 51, 151);
+}
