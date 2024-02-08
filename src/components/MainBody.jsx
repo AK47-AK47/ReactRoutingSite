@@ -11,7 +11,6 @@ import { Outlet, useRouteError } from 'react-router-dom';
 export default function MainBody() {
 
   let error = useRouteError();
-  //console.log(error);
   const isError = (error != null);
   console.log('is Error? ', isError);
   console.log(error);

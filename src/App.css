@@ -12,3 +12,19 @@ h1 {
   font-weight: 800;
   font-size: 1.5rem;
 }
+
+
+.btn-outline-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: purple;
+  --bs-btn-bg: white;
+  --bs-btn-border-color: purple;
+
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: purple;
+  --bs-btn-hover-border-color: purple;
+
+  --bs-btn-active-color: rgb(255, 0, 157);
+  --bs-btn-active-bg: rgb(140, 43, 140);
+  --bs-btn-active-border-color: purple;
+}

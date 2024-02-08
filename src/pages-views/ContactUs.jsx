@@ -13,36 +13,36 @@ export default function ContactUs() {
     //propably not working the onSubmit={handleSubmit} call
     //correct
     //using react component <Form> works if i move the event on button:
-    //<input class="btn btn-outline-primary" type="submit" value="Submit" onClick={handleSubmit}/>
+    //<input className="btn btn-outline-primary" type="submit" value="Submit" onClick={handleSubmit}/>
   }
 
   return (
     <>
       <p>Contact with us page</p>
       <form onSubmit={handleSubmit}>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">
+        <div className="input-group mb-3">
+          <span className="input-group-text" id="inputGroup-sizing-default">
             Title
           </span>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             aria-label="title input"
             aria-describedby="input-title-message"
           />
         </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">
+        <div className="input-group mb-3">
+          <span className="input-group-text" id="inputGroup-sizing-default">
             Message
           </span>
           <textarea
-            class="form-control"
+            className="form-control"
             aria-label="body input"
             aria-describedby="textarea-input-body-message"
           />
         </div>
 
-        <input class="btn btn-outline-primary" type="submit" value="Submit" />
+        <input className="btn btn-outline-primary" type="submit" value="Submit" />
       </form>
     </>
   );

@@ -36,12 +36,19 @@ export default function Users() {
     // dispays Loading....
     pageState === 'loading' ? (
       <>
-        <p>Products page</p>
+        <p>Users page</p>
         <p>Loading....</p>
       </>
     ) : (
       <>
         <p>This is Users page</p>
+        <Link
+          to="/new-user"
+          className="btn btn-outline-primary"
+          style={{ margin: '8px' }}
+        >
+          Add new User
+        </Link>
         {users.map((user) => (
           <Link to={'/user/' + user.id} key={user.id}>
             <UserCard name={user.name} userData={user} />

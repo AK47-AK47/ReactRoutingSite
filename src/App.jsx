@@ -20,12 +20,15 @@ import Users from './pages-views/Users.jsx';
 import UsersError from './pages-views/UsersError.jsx';
 import User from './pages-views/User.jsx';
 import UserError from './pages-views/UserError.jsx';
+import NewUser from './pages-views/NewUser.jsx';
 import ContactUs from './pages-views/ContactUs.jsx';
 //layouts
 import RootLayout from './components/RootLayout.jsx';
 import ErrorLayout from './components/ErrorLayout.jsx';
 //loaders
 import { loadUsers, loadUser } from './loaders/loaders.jsx';
+//actions
+import { validateAndSubmitNewUser } from './actions/validateAndSubmitNewUser.jsx';
 
 /*
 const myRouter = createBrowserRouter(
@@ -65,7 +68,7 @@ const myRouter = createBrowserRouter([
         element: <Product />,
       },
       {
-        path: 'users',
+        path: '/users',
         element: <Users />,
         loader: loadUsers,
         errorElement: <UsersError />,
@@ -77,7 +80,12 @@ const myRouter = createBrowserRouter([
         //errorElement: <UserError />,
       },
       {
-        path: 'contact-us',
+        action: validateAndSubmitNewUser,
+        path: '/new-user',
+        element: <NewUser />,
+      },
+      {
+        path: '/contact-us',
         element: <ContactUs />,
       },
     ],
